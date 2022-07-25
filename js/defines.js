@@ -1,7 +1,8 @@
 const WHITE = 255;
 const GREY = 128;
 const BLACK = 0;
-const ACTIVE = "#1fc6d1";
+const ACTIVE_1 = "#1fc6d1";
+const ACTIVE_2 = "#eab676";
 
 class Vertex{
     value = "";

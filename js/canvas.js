@@ -26,7 +26,7 @@ function setup() {
     // Creazione degli archi
     graph.vertexes.forEach(source => {
         graph.vertexes.forEach(dest => {
-            if(source != dest){
+            if(source != dest && !dest.adj.includes(source)){
                 let collides = false;
 
                 graph.vertexes.forEach(middle => {
@@ -36,8 +36,10 @@ function setup() {
                 })
 
                 if(!collides)
-                    if(Math.random() < EDGE_SPAWN_RATE)
+                    if(Math.random() < EDGE_SPAWN_RATE){
                         source.addAdj(dest);
+                        dest.addAdj(source);
+                    }
             }
         })
     })
