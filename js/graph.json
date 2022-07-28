@@ -1,0 +1,20 @@
+[{
+    "selector": "node",
+    "style": {
+        "text-valign": "center",
+        "text-halign": "center",
+        "width": 16,
+        "height": 16
+    }
+}, {
+    "selector": "node[type]",
+    "style": {
+        "label": "data(type)"
+    }
+}, {
+    "selector": "edge",
+    "style": {
+        "curve-style": "bezier",
+        "target-arrow-shape": "triangle"
+    }
+}]
