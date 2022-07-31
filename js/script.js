@@ -124,6 +124,11 @@ function get_graph_style(){
             "target-arrow-shape": "triangle"
         }
     }, {
+        "selector": "edge.directed",
+        "style": {
+            "target-arrow-shape": "triangle"
+        }
+    }, {
         "selector": "edge[label]",
         "style": {
             "label": "data(label)",
@@ -156,6 +161,7 @@ function generate_random_graph(){
             data: {
                 id: "n" + i,
                 label: "n" + i,
+                distance: Infinity,
                 visited: false,
                 explored: false
             }
@@ -213,6 +219,7 @@ function reset_nodes(){
     for(let i = 0; i < nodes.length; i++){
         nodes[i].data().explored = false;
         nodes[i].data().visited = false;
+        nodes[i].data().distance = Infinity;
         style_node(nodes[i], NODE_WHITE);
     }
 }
